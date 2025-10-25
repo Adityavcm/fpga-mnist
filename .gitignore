@@ -4,8 +4,11 @@ venv/
 __pycache__/
 *.pyc
 
-# Ignore model checkpoints or large files
+# Ignore model checkpoints or large data
 *.h5
 *.keras
 *.npz
 *.ckpt
+*.pth
+*.pt
+
