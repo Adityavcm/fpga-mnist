@@ -1,0 +1,5 @@
+To activate environment : cd fpgaProjectNew --- source lenet-env/bin/activate
+Train model : python3 train_mnist_mlp.py
+Quantize the model : python3 quantize_and_export.py
+Send image to FPGA : python3 host_send_image.py --port /dev/ttyUSB0 --index 5
+Steps related to quartus, refer verilog/instructions.txt

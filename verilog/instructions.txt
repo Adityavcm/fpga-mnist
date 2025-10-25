@@ -1,0 +1,108 @@
+Single 50 MHz clock clk.
+UART BAUD 115200.
+On-Chip Memory IPs have 1-cycle synchronous read latency.
+You will create On-Chip Memory/ROM IPs for the .mif files with the names used in top_mnist.v instantiation (I include explicit names to match).
+
+ 
+ 
+ 
+🛠️ Ok. Now how to do this in Quartus, step-by-step.
+Step 1 — Create a New Quartus Project
+
+Open Quartus Prime
+
+Click File → New Project Wizard
+
+Choose a folder (example: ~/fpgaProjectNew/FPGA)
+
+Give project name: mnist_fpga
+
+Device Selection:
+
+Manufacturer: Altera / Intel
+
+Family: Cyclone IV
+
+Device: EP4CE115F29C7 (this is the DE2-115 FPGA)
+
+Click Finish.
+
+Step 2 — Add Your Verilog Files
+
+You will eventually have files like:
+
+top_mnist.v
+fc_layer.v
+uart_rx.v
+controller.v
+relu.v
+
+
+But don’t worry — I will write them for you step-by-step.
+
+For now, just note:
+
+Add them later using: Project → Add/Remove Files in Project
+
+Step 3 — Generate ROM for Weights (Very Important)
+
+Open IP Catalog
+(Right side panel. If not visible → View → Utility Windows → IP Catalog)
+
+Search: "ROM"
+
+Choose: "On-Chip Memory (RAM or ROM)"
+
+Click Double-Click → IP Parameter Wizard opens.
+
+Inside wizard:
+
+Setting	Choose
+Memory Type	ROM
+Data Width	depends on weights (usually 16 bits)
+Depth	depends on #weights (we will tell you exact number)
+Initialization File	Select your .mif file
+
+Then Generate → it creates:
+
+fc0_W_rom.v
+fc0_W_rom.qip
+
+
+Both must be added to project.
+
+You repeat this for:
+
+fc0_W_rom
+
+fc0_b_rom
+
+fc1_W_rom
+
+fc1_b_rom
+
+(Again, I will tell you exact numbers when we lock architecture.)
+
+Step 4 — RAM for Input Image
+
+Repeat IP Catalog → On-Chip Memory, but choose RAM, not ROM.
+
+This RAM will be written by your PC (via USB UART) to send the input image.
+
+Step 5 — Compile and Program FPGA
+
+After wiring everything:
+
+Click Compile
+
+Then Tools → Programmer
+
+Select DE2-115 board
+
+Load .sof program file
+
+Click Start
+
+Step 6 — Now You Run host_send_image.py
+
+This sends the image from laptop → FPGA.

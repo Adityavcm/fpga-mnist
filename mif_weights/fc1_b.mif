@@ -1,0 +1,17 @@
+DEPTH = 10;
+WIDTH = 16;
+ADDRESS_RADIX = DEC;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+  0 : E8DF;
+  1 : 00CD;
+  2 : 05FD;
+  3 : F8F3;
+  4 : 0160;
+  5 : 0D95;
+  6 : 089B;
+  7 : 0B5F;
+  8 : FCA3;
+  9 : F5AF;
+END;

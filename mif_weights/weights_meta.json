@@ -1,0 +1,30 @@
+{
+  "fc0": {
+    "layer_index": 0,
+    "W_shape": [
+      784,
+      64
+    ],
+    "b_shape": [
+      64
+    ],
+    "scale": 42442.9790981048,
+    "W_mif": "fc0_W.mif",
+    "b_mif": "fc0_b.mif",
+    "addr_mapping": "row_major: addr = i * H + j (i=0..r-1, j=0..c-1)"
+  },
+  "fc1": {
+    "layer_index": 1,
+    "W_shape": [
+      64,
+      10
+    ],
+    "b_shape": [
+      10
+    ],
+    "scale": 34968.721320989745,
+    "W_mif": "fc1_W.mif",
+    "b_mif": "fc1_b.mif",
+    "addr_mapping": "row_major: addr = i * H + j (i=0..r-1, j=0..c-1)"
+  }
+}
