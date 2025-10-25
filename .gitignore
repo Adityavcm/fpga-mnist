@@ -1,0 +1,11 @@
+# Ignore virtual environments
+lenet-env/
+venv/
+__pycache__/
+*.pyc
+
+# Ignore model checkpoints or large files
+*.h5
+*.keras
+*.npz
+*.ckpt
