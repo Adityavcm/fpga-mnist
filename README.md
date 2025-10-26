@@ -294,13 +294,6 @@ Send test image:
 python3 host_send_image.py --port /dev/ttyUSB0 --index 0
 ```
 
----
-
-## License
-
-This project is released under the **MIT License** — see `LICENSE` for details.
-
----
 
 ## Acknowledgements
 
@@ -309,5 +302,3 @@ This project is released under the **MIT License** — see `LICENSE` for details
 * Intel Quartus Prime
 
 ---
-
-If you want, I can also produce a compact `README-short.md` (one-page TL;DR) or generate a `requirements.txt` example block for the repo.
