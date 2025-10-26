@@ -301,5 +301,3 @@ python3 host_send_image.py --port /dev/ttyUSB0 --index 0
 * MNIST dataset (Yann LeCun et al.)
 * TensorFlow / Keras
 * Intel Quartus Prime
-
----
