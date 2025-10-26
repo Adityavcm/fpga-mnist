@@ -294,6 +294,7 @@ Send test image:
 python3 host_send_image.py --port /dev/ttyUSB0 --index 0
 ```
 
+---
 
 ## Acknowledgements
 
