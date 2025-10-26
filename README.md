@@ -70,12 +70,24 @@ Python (training & export)
 
 Python 3.8–3.11 recommended.
 
-Install packages:
+```markdown
+### Install dependencies from `requirements.txt`
 
-bash
-Copy code
-pip install tensorflow numpy matplotlib pyserial
-If you have no GPU OR pip fails to find a TF wheel for your Python, use a conda env (conda create -n lenet python=3.10) and install via conda or pick a compatible tensorflow version.
+# (1) If you're using a virtual environment, activate it first:
+# Linux / macOS
+source lenet-env/bin/activate
+# Windows (PowerShell)
+lenet-env\Scripts\activate
+
+# (2) Install everything from the file:
+pip install -r requirements.txt
+
+# (3) If you see "externally-managed-environment" — create & use a venv, then run the install:
+python3 -m venv lenet-env
+source lenet-env/bin/activate
+pip install -r requirements.txt
+```
+
 
 FPGA toolchain
 
