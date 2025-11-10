@@ -1,0 +1,31 @@
+# Ignore entire virtual environment
+lenet-env/
+lenet-env/*
+
+# Ignore Python cache/junk
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore model checkpoints, weights
+*.h5
+*.ckpt
+*.weights
+*.pb
+
+# Ignore raw image and mem data
+*.raw
+*.mem
+
+# Ignore logs or debug files
+*.log
+*.vcd
+*.out
+
+# Ignore editor/project files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
