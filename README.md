@@ -19,8 +19,8 @@ This project implements a simple Multi-Layer Perceptron (MLP) in Verilog to clas
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/Adityavcm/fpga-mnist.git
+    cd fpga-mnist
     ```
 
 2.  **Activate the Python virtual environment:**
